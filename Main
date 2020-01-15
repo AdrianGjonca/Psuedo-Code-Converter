@@ -1,1 +1,26 @@
 
+Module Module1
+
+    Sub Main()
+        Dim original As String
+        original = My.Computer.FileSystem.ReadAllText("S:\Visual Studio 2010\Projects\Array Assessment\Array Assessment\Module1.vb")
+        Dim newthing As String = original.Replace("Sub ", "Subprocedure ")
+        newthing = newthing.Replace("Console.ReadLine", "Userinput")
+        newthing = newthing.Replace("Console.WriteLine", "Output")
+        newthing = newthing.Replace("Console.Write", "Output")
+        newthing = newthing.Replace("Console.Clear", "Clear")
+        newthing = newthing.Replace("Dim ", "")
+        newthing = newthing.Replace("As Integer ", "")
+        newthing = newthing.Replace("As Integer", "")
+        newthing = newthing.Replace("As String ", "")
+        newthing = newthing.Replace("As String", "")
+        newthing = newthing.Replace("As Double ", "")
+        newthing = newthing.Replace("As Double", "")
+        newthing = newthing.Replace("As Float ", "")
+        newthing = newthing.Replace("As Float", "")
+
+        Console.WriteLine(newthing)
+        Console.ReadLine()
+    End Sub
+
+End Module
